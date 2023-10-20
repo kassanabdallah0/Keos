@@ -1,0 +1,126 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Color Scheme */
+.primary-color {
+    color: #136d8e;
+}
+
+.secondary-color {
+    color: #ed0f33;
+}
+
+/* Handsontable Enhancements */
+.handsontable th {
+    background-color: #136d8e;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.handsontable td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.handsontable td:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.handsontable tr {
+    animation: rowFadeIn 0.5s ease;
+}
+
+/* Handsontable Button Styles */
+.handsontable button {
+    background-color: #136d8e;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.handsontable button:hover {
+    background-color: #136d8e;
+    transform: translateY(-2px);
+}
+.tr {
+    background-color: #f0f0f0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.handsontable button:active {
+    background-color: #003d80;
+    transform: translateY(0);
+}
+/* Buttons */
+.btn {
+    background-color: #136d8e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    background-color: #003d80;
+    transform: translateY(0);
+}
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);  /* Bootstrap's focus box-shadow */
+}
+.btn-outline-primary {
+    border: 2px solid #136d8e;
+    color: #136d8e;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #136d8e;
+    color: #fff;
+}
+/* Header/Navbar */
+.navbar {
+    background-color: #136d8e;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ccc;
+}
+
+/* Logo */
+.navbar-brand img {
+    height: 40px;
+}

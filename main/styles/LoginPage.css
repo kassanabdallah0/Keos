@@ -1,0 +1,245 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #F5F5F5;
+  color: #333333;
+  transition: all 0.3s ease;  /* New */
+}
+
+/* Header Section */
+header {
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0;
+  animation: fadeInDown 1s ease;
+}
+
+header h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+  /* Login Section */
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-form {
+  background-color: #FFFFFF;  /* Changed */
+  border: 2px solid #2596be;  /* New */
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  animation: fadeInUp 1s ease;
+}
+
+.login-form h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2596be;  /* Changed */
+}
+
+  .login-form label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  .login-form input[type="text"]:focus,
+  .login-form input[type="password"]:focus {
+    border-color: #a8dadc;
+    box-shadow: 0 0 5px rgba(168, 218, 220, 0.5);
+    border-radius: 5px;
+    padding: 10px 15px;
+  }
+
+  /* About Us Section */
+  #about {
+    background-color: #2596be;  /* Changed */
+    color: #FFFFFF;  /* Changed */
+  }
+  
+  #about h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+
+  #about p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #333333;
+  }
+
+  #about .about-card {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  #about .about-card:hover {
+    transform: translateY(-5px);
+  }
+
+  #about .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Navbar */
+  nav {
+    background-color: #8bd8f4;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-brand {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #8bd8f4;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333333;
+    margin: 0 15px;
+    padding: 5px 0;
+    position: relative;
+  }
+
+  .navbar-nav .nav-item .nav-link:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-nav .nav-item .nav-link:hover:before {
+    background-color: #8bd8f4;
+  }
+
+  /* Footer Section */
+  footer {
+    background-color: #8bd8f4;
+    color: #333333;
+    padding: 20px 0;
+  }
+
+  footer p {
+    margin-bottom: 10px;
+  }
+
+  .social-icons {
+    font-size: 24px;
+  }
+
+  .social-icons a {
+    color: #333333;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: #003d80;
+  }
+
+  /* Animation for the telecom image */
+  .slide1,
+  .slide2,
+  .slide3 {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .slide1.show,
+  .slide2.show,
+  .slide3.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Custom media queries */
+  @media (max-width: 576px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+    .navbar-nav .nav-item .nav-link {
+      font-size: 1rem;
+    }
+  }
+  /* New: Adding a focus state to your input for better UX */
+
+
+/* New: Adding a hover effect on about card */
+#about .about-card:hover {
+  background-color: #f1f6f9;
+}
+
+/* New: Added responsive design */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 15px;
+  }
+  
+  #about h2, #about p {
+    text-align: center;
+  }
+}
+
+/* New: Added a transition effect */
+.navbar-nav .nav-item .nav-link:hover:before,
+.login-form button[type="submit"]:hover,
+.social-icons a:hover {
+  transition: all 0.3s ease;
+}

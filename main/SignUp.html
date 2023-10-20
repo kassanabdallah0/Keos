@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- reCAPTCHA -->
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles\SignUp.css">
+  <!-- zxcvbn for password strength -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form id="signup-form" method="post" novalidate>
+          <h2 class="text-center">Sign Up</h2>
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username"  name="username" autocomplete="username" required>
+            <div class="invalid-feedback">Please provide a username.</div>
+          </div>
+          <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" class="form-control" id="fullname" name="fullname" autocomplete="fullname" required>
+            <div class="invalid-feedback">Please provide your full name.</div>
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" class="form-control" id="dob" name="dob" autocomplete="dob" required>
+            <div class="invalid-feedback">Please provide your date of birth.</div>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select class="form-control" id="gender" name="gender" autocomplete="gender" required>
+              <option selected disabled value="">Choose...</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+            <div class="invalid-feedback">Please select your gender.</div>
+          </div>
+          <div class="form-group">
+            <label for="telephone">Telephone Number</label>
+            <input type="tel" class="form-control" id="telephone" name="telephone" placeholder="Enter your telephone number" 
+            pattern="^\d{10}$" autocomplete="telephone" required
+                   title="Telephone number should be in the format: +CountryCode-RegionCode-LocalNumber">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" autocomplete="email" required>
+            <div class="invalid-feedback">Please provide a valid email.</div>
+          </div>
+	  <div class="form-group">
+  	    <label for="confirm-email">Confirm Email:</label>
+  	    <input type="email" class="form-control" id="confirm-email" required>
+  	    <div class="invalid-feedback">Emails do not match.</div>
+	  </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" autocomplete="new-password" required>
+            <div class="invalid-feedback">Please provide a password.</div>
+            <small id="passwordHelpBlock" class="form-text text-muted">
+              Your password must be 8-20 characters long.
+            </small>
+            <div id="password-strength"></div>
+          </div>
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" class="form-control" id="confirm-password"  autocomplete="confirm-password" required>
+            <div class="invalid-feedback">Passwords do not match.</div>
+          </div>
+          <div class="form-group">
+            <label for="Role"> Role:</label>
+            <select class="form-control" id="Role" name="Role" autocomplete="Role" required>
+              <option selected disabled value="">Choose...</option>
+              <option>CDP</option>
+              <option>Admin</option>
+              <option>other</option>
+            </select>
+              <div class="invalid-feedback">Please select your Role.</div>
+          </div>
+          <input type="submit" class="btn btn-primary btn-block">
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+ <script src="javascript\SignUp.js"></script>
+</body>
+</html>

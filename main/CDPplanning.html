@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Handsontable CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable@10.0.0/dist/handsontable.full.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css">    <title>Your Application</title>
+    <link rel="stylesheet" href="styles/CDPplanning.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    .grey-text {
+        color: grey;
+      }
+      .black-text {
+        color: black;
+      }
+</style>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary sticky-top">
+        <a class="navbar-brand" href="#">Keos-Telecom</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <!-- Action and Search Row -->
+    <div class="row my-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="form-row align-items-center">
+                            <!-- Print, Export, Upload -->
+                            <div class="col-md-4">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary" id="printButton">Print</button>
+                                    <button type="button" class="btn btn-primary" id="exportButton">Export</button>
+                                    <!-- Custom File Upload -->
+                                    <input type="file" class="d-none" id="upload">
+                                    <button type="button" class="btn btn-primary" id="uploadButton" onclick="document.getElementById('upload').click();">Import</button>
+                                </div>
+                            </div>
+                            <!-- Search Bar -->
+                            <div class="col-md-4">
+                                <div class="input-group">
+
+                                    <input type="text" class="form-control" id="searchBar" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-secondary" id="searchButton">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary" id = "previousButton"><</button>
+                                        <button type="button" class="btn btn-secondary" id = "nextButton">></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Replace Bar -->
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="replaceBar" placeholder="Replace">
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-warning" id="replaceSelectedButton">Replace Selected</button>
+                                        <button type="button" class="btn btn-danger" id="replaceAllButton">Replace All</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Handsontable Full-Width -->
+<div class="container-fluid my-4">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12">
+                    <div id="hot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <select id="customDropdown" size="5" style="display: none; position: absolute;"></select>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/handsontable@8.4.0/dist/handsontable.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/paginationjs@2.6.0/dist/pagination.js"></script>
+    <script src="./javascript/demo13.js" type="module"></script>
+</body>
+</html>
